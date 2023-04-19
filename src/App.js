@@ -1,5 +1,6 @@
 import './App.css';
 import Container from './components/Container/Container';
+import Logo from './components/Logo/Logo';
 import Navigation from './components/Navigation/Navigation';
 
 function App() {
@@ -7,6 +8,7 @@ function App() {
     <div className="App">
       <Container>
         <Navigation />
+        <Logo />
       </Container>
     </div>
   );
