@@ -1,7 +1,7 @@
 import React from 'react';
 import './Logo.css';
 import Tilt from 'react-parallax-tilt';
-import logo from '../../assets/face-scan.png';
+import logo from '../../assets/face-id.png';
 
 const Logo = () => {
     return (
