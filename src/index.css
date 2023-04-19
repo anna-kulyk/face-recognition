@@ -5,14 +5,9 @@
 }
 
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   font-family: 'Poppins', sans-serif;
   color: rgb(48, 48, 48);
+  background: linear-gradient(to right, rgb(204, 128, 255), rgb(88, 199, 254));
 }
 
 code {
