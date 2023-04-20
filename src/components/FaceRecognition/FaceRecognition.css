@@ -1,0 +1,27 @@
+.face-recognition {
+    display: flex;
+    justify-content: center;
+}
+
+.face-recognition__body {
+    max-width: 50rem;
+    position: relative;
+}
+
+.face-recognition__img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.box {
+    position: absolute;
+    width: 21.2%;
+    height: 51.1%;
+    top: 18.8%;
+    left: 39.8%;
+    border-style: solid;
+    border-image-slice: 1;
+    border-width: 5px;
+    border-image-source: linear-gradient(to left, rgb(204, 128, 255), rgb(88, 199, 254));
+    
+}
