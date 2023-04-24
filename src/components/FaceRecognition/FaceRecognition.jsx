@@ -1,52 +1,23 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import './FaceRecognition.css';
+import FaceBox from '../FaceBox/FaceBox';
 
-const FaceRecognition = ({ url }) => {
+const FaceRecognition = ({ url, boxes }) => {
 
-    const PAT_KEY = "c0a5747fc60d4a84a6c8a13b39c8f405";
-
-    const getClarifaiRequestOptions = (url, key) => {
-
-        const raw = JSON.stringify({
-            "user_app_id": {
-                "user_id": "clarifai",
-                "app_id": "main"
-            },
-            "inputs": [
-                {
-                    "data": {
-                        "image": {
-                            "url": `${url}`
-                        }
-                    }
-                }
-            ]
-        });
-
-        const requestOptions = {
-            method: 'POST',
-            headers: {
-                'Accept': 'application/json',
-                'Authorization': `Key${key}`
-            },
-            body: raw
-        };
-
-        return requestOptions;
-    }
-
-    // useEffect(() => {
-    //     fetch(`https://api.clarifai.com/v2/models/face-detection/versions/6dc7e46bc9124c5c8824be4822abe105/outputs`, requestOptions)
-    //         .then(response => response.text())
-    //         .then(result => console.log(result))
-    //         .catch(error => console.log('error', error));
-    // })
+    const boxElements = boxes.map((box, index) => {
+        const boundingBox = box.region_info.bounding_box;
+        return <FaceBox key={index}
+            top={boundingBox.top_row}
+            left={boundingBox.left_col}
+            bottom={boundingBox.bottom_row}
+            right={boundingBox.right_col} />
+    });
 
     return (
         <div className="face-recognition">
             <div className="face-recognition__body">
                 <img className="face-recognition__img" src={url} alt="portrait" />
-                <div className='box'></div>
+                {boxElements}
             </div>
         </div>
     );
