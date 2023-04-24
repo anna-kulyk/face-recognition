@@ -4,4 +4,5 @@
     border-image-slice: 1;
     border-width: 5px;
     border-image-source: linear-gradient(to left, rgb(204, 128, 255), rgb(88, 199, 254));
+    cursor: pointer;
 }

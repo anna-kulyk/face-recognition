@@ -53,7 +53,6 @@ function App() {
     fetch(`https://api.clarifai.com/v2/models/face-detection/versions/6dc7e46bc9124c5c8824be4822abe105/outputs`, requestOptions)
       .then(response => response.json())
       .then(result => {
-        console.log(result);
         if (result.status.code === 10000) {
           setIsValidUrl(true);
           if (result.outputs[0].data.regions) {
