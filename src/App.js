@@ -6,6 +6,7 @@ import ImageLinkForm from './components/ImageLinkForm/ImageLinkForm';
 import Logo from './components/Logo/Logo';
 import Navigation from './components/Navigation/Navigation';
 import ParticlesBg from 'particles-bg'
+import ImageLoader from './components/ImageLoader/ImageLoader';
 
 function App() {
 
@@ -98,6 +99,7 @@ function App() {
         </div>
         <ImageLinkForm setImageUrl={setImageUrl} setIsValidUrl={setIsValidUrl} setIsLoading={setIsLoading} />
         {!isLoading && isValidUrl && <FaceRecognition url={imageUrl} boxes={boxes} />}
+        {isLoading && <ImageLoader />}
       </Container>
       <ParticlesBg color="#ffffff" type="cobweb" bg={true} config={{ rps: 0.005 }} />
     </div>
