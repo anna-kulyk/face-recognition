@@ -7,36 +7,14 @@ import Logo from './components/Logo/Logo';
 import Navigation from './components/Navigation/Navigation';
 import ParticlesBg from 'particles-bg'
 import ImageLoader from './components/ImageLoader/ImageLoader';
+import ErrorMessage from './components/ErrorMessage/ErrorMessage';
 
 function App() {
 
   const [imageUrl, setImageUrl] = useState("https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80");
   const [isValidUrl, setIsValidUrl] = useState(true);
   const [isLoading, setIsLoading] = useState(false);
-  const [boxes, setBoxes] = useState([
-    {
-      "id": "48e07e32da72e0ce1bdeedfb53acc9ef",
-      "region_info": {
-        "bounding_box": {
-          "top_row": 0.18747647,
-          "left_col": 0.39775753,
-          "bottom_row": 0.6992775,
-          "right_col": 0.609766
-        }
-      },
-      "data": {
-        "concepts": [
-          {
-            "id": "ai_b1b1b1b1",
-            "name": "BINARY_POSITIVE",
-            "value": 0.9999988,
-            "app_id": "main"
-          }
-        ]
-      },
-      "value": 0.9999988
-    }
-  ]);
+  const [boxes, setBoxes] = useState([]);
 
   const PAT_KEY = "c0a5747fc60d4a84a6c8a13b39c8f405";
 
@@ -100,6 +78,7 @@ function App() {
         <ImageLinkForm setImageUrl={setImageUrl} setIsValidUrl={setIsValidUrl} setIsLoading={setIsLoading} />
         {!isLoading && isValidUrl && <FaceRecognition url={imageUrl} boxes={boxes} />}
         {isLoading && <ImageLoader />}
+        {!isLoading && !isValidUrl && <ErrorMessage />}
       </Container>
       <ParticlesBg color="#ffffff" type="cobweb" bg={true} config={{ rps: 0.005 }} />
     </div>
