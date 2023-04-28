@@ -4,7 +4,6 @@ import Container from './components/Container/Container';
 import FaceRecognition from './components/FaceRecognition/FaceRecognition';
 import ImageLinkForm from './components/ImageLinkForm/ImageLinkForm';
 import Logo from './components/Logo/Logo';
-import Navigation from './components/Navigation/Navigation';
 import ParticlesBg from 'particles-bg'
 import ImageLoader from './components/ImageLoader/ImageLoader';
 import ErrorMessage from './components/ErrorMessage/ErrorMessage';
@@ -72,7 +71,6 @@ function App() {
       <Container>
         <div className="app__header">
           <Logo />
-          <Navigation />
         </div>
         <ImageLinkForm setImageUrl={setImageUrl} setIsValidUrl={setIsValidUrl} setIsLoading={setIsLoading} />
         {!isLoading && isValidUrl && <FaceRecognition url={imageUrl} boxes={boxes} />}
