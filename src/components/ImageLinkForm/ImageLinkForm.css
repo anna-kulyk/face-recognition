@@ -6,11 +6,6 @@
     align-items: center;
 }
 
-.form__text {
-    font-size: 1.2rem;
-    font-weight: bold;
-}
-
 .form__body {
     max-width: 50rem;
     width: 100%;

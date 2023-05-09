@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
 import './ImageLinkForm.css';
 
-const ImageLinkForm = ({ setImageUrl, setIsValidUrl, setIsLoading }) => {
+const ImageLinkForm = ({ setImageUrl, setIsValidUrl, setIsLoading, setIsFirstImage, isFirstImage }) => {
     const [urlInput, setUrlInput] = useState('');
 
     const detectBtnHandler = () => {
         if (urlInput.trim() === '') return;
+        if (isFirstImage) setIsFirstImage(false);
         setIsLoading(true);
         setIsValidUrl(false);
         setImageUrl(urlInput);
@@ -14,10 +15,6 @@ const ImageLinkForm = ({ setImageUrl, setIsValidUrl, setIsLoading }) => {
 
     return (
         <div className="form">
-            <div className="form__text">
-                <p>{`This App will magically detect faces in your pictures.`}</p>
-                <p>{`Give it a try.`}</p>
-            </div>
             <div className="form__body">
                 <input className="form__input"
                     type="text"
