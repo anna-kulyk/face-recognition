@@ -1,8 +1,8 @@
 import React from 'react';
-import './FaceRecognition.css';
+import './FaceRecOutput.css';
 import FaceBox from '../FaceBox/FaceBox';
 
-const FaceRecognition = ({ url, boxes }) => {
+const FaceRecOutput = ({ url, boxes }) => {
 
     const boxElements = boxes.map((box, index) => {
         const boundingBox = box.region_info.bounding_box;
@@ -23,4 +23,4 @@ const FaceRecognition = ({ url, boxes }) => {
     );
 };
 
-export default FaceRecognition;
+export default FaceRecOutput;
