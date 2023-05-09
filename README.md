@@ -1,4 +1,4 @@
-# Robofriends
+# Face Recognition
 
 This is a simple React application that uses Clarifai's face-detection model to detect faces in images.
 
