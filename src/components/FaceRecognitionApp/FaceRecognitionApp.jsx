@@ -11,54 +11,7 @@ const FaceRecognitionApp = () => {
     const [isLoading, setIsLoading] = useState(true);
     const [boxes, setBoxes] = useState([]);
 
-    // const PAT_KEY = "c0a5747fc60d4a84a6c8a13b39c8f405";
-
-    // const getClarifaiRequestOptions = (url, key) => {
-
-    //     const raw = JSON.stringify({
-    //         "user_app_id": {
-    //             "user_id": "clarifai",
-    //             "app_id": "main"
-    //         },
-    //         "inputs": [
-    //             {
-    //                 "data": {
-    //                     "image": {
-    //                         "url": `${url}`
-    //                     }
-    //                 }
-    //             }
-    //         ]
-    //     });
-
-    //     const requestOptions = {
-    //         method: 'POST',
-    //         headers: {
-    //             'Accept': 'application/json',
-    //             'Authorization': `Key ${key}`
-    //         },
-    //         body: raw
-    //     };
-
-    //     return requestOptions;
-    // }
-
     useEffect(() => {
-        // const requestOptions = getClarifaiRequestOptions(imageUrl, PAT_KEY);
-        // fetch(`https://api.clarifai.com/v2/models/face-detection/versions/6dc7e46bc9124c5c8824be4822abe105/outputs`, requestOptions)
-        //     .then(response => response.json())
-        //     .then(result => {
-        //         if (result.status.code === 10000) {
-        //             setIsValidUrl(true);
-        //             if (result.outputs[0].data.regions) {
-        //                 setBoxes(result.outputs[0].data.regions);
-        //             } else {
-        //                 setBoxes([]);
-        //             }
-        //         }
-        //     })
-        //     .catch(error => { console.log('error', error) })
-        //     .finally(() => setIsLoading(false));
         fetch('http://localhost:8000/facedetect', {
             method: 'post',
             headers: { "Content-type": "application/json" },
