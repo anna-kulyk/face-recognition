@@ -6,7 +6,7 @@ const FaceRecMessage = ({ isFirstImage, isLoading, isValidUrl, boxes }) => {
     if (isFirstImage) {
         return (
             <div className="face-recognition__message">
-                <p>This App will magically detect faces in your pictures.</p>
+                <p>This App will magically detect faces in your picture.</p>
                 <p>Give it a try.</p>
             </div>
         );
