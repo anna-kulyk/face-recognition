@@ -1,6 +1,6 @@
 # Robofriends
 
-A simple react application with cute robots.
+This is a simple React application that uses Clarifai's face-detection model to detect faces in images.
 
 ## [Check the live demo]()
 
