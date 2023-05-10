@@ -14,7 +14,7 @@ const FaceRecognitionApp = () => {
     const [boxes, setBoxes] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:8000/facedetect', {
+        fetch('https://smart-brain-back-4o35.onrender.com/facedetect', {
             method: 'post',
             headers: { "Content-type": "application/json" },
             body: JSON.stringify({

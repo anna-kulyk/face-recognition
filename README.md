@@ -1,8 +1,8 @@
 # Face Recognition
 
-This is a simple React application that uses Clarifai's face-detection model to detect faces in images.
+This is a simple React application that uses AI to detect faces in images.
 
-## [Check the live demo]()
+## [Check the live demo](https://smartbrain-ai-app.netlify.app/)
 
 ![Screenshot](https://raw.githubusercontent.com/anna-kulyk/face-recognition/master/src/assets/facerec.jpg)
 
