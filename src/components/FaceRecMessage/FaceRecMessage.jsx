@@ -13,7 +13,7 @@ const FaceRecMessage = ({ isFirstImage, isLoading, isValidUrl, boxes }) => {
     } else if (!isLoading && isValidUrl && boxes.length === 0) {
         return (
             <div className="face-recognition__message">
-                <p>Haven't found any faces in this picture ☹</p>
+                <p>This picture doesn't seem to have any faces in it ☹</p>
                 <p>Try another one.</p>
             </div>
         );
