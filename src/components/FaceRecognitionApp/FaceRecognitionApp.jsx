@@ -19,7 +19,8 @@ const FaceRecognitionApp = () => {
             headers: { "Content-type": "application/json" },
             body: JSON.stringify({
                 imageUrl: imageUrl
-            })
+            }),
+            signal: AbortSignal.timeout(20000)
         })
             .then(response => {
                 if (response.status === 200) {
