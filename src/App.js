@@ -10,9 +10,9 @@ function App() {
   return (
     <div className="app">
       <Container>
-        <div className="app__header">
+        <header className="app__header">
           <Logo />
-        </div>
+        </header>
         <FaceRecognitionApp />
       </Container>
       <ParticlesBg color="#ffffff" type="cobweb" bg={true} config={{ rps: 0.005 }} />
